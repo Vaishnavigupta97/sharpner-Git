@@ -13,12 +13,17 @@
 
 // ////////////////////////////////////////////getElementById/////////////////////////////////////////////
 // console.log(document.getElementById("headerTitle"));
-var headerTitle = document.getElementById("headerTitle");
-console.log(headerTitle);
+// var headerTitle = document.getElementById("headerTitle");
+// console.log(headerTitle);
 // headerTitle.textContent = "Hello text content"
 // headerTitle.innerText = "Hello text content";
-console.log(headerTitle.textContent);
-console.log(headerTitle.innerText);
-headerTitle.innerHTML = `<h3>heading</h3>`
-var header = document.getElementById("mainHeader");
-header.style.borderBottom = "solid 3px #000";
+// console.log(headerTitle.textContent);
+// console.log(headerTitle.innerText);
+// headerTitle.innerHTML = `<h3>heading</h3>`
+// var header = document.getElementById("mainHeader");
+// header.style.borderBottom = "solid 3px #000";
+
+// ..........................................getElementByClassName...........................
+var items = document.getElementsByClassName("items");
+console.log(items);
+console.log("Nk");
