@@ -12,18 +12,26 @@
 // document.all[8].textContent = "Hello";
 
 // ////////////////////////////////////////////getElementById/////////////////////////////////////////////
-// console.log(document.getElementById("headerTitle"));
-// var headerTitle = document.getElementById("headerTitle");
+// console.log(document.getElementById("header-title"));
+// var headerTitle = document.getElementById("header-title");
 // console.log(headerTitle);
 // headerTitle.textContent = "Hello text content"
 // headerTitle.innerText = "Hello text content";
 // console.log(headerTitle.textContent);
 // console.log(headerTitle.innerText);
 // headerTitle.innerHTML = `<h3>heading</h3>`
-// var header = document.getElementById("mainHeader");
+// var header = document.getElementById("main-header");
 // header.style.borderBottom = "solid 3px #000";
 
 // ..........................................getElementByClassName...........................
-var items = document.getElementsByClassName("items");
+var items = document.getElementsByClassName("list-group-item");
 console.log(items);
-console.log("Nk");
+console.log(items[1]);
+items[1].textContent = "hello 2";
+items[1].style.fontWeight = 'bold';
+items[1].style.backgroundColor = 'yellow';
+
+for(var i = 0; i <items.length; i++){
+    items[i].style.backgroundColor = '#f4f4f4';
+}
+
