@@ -40,32 +40,96 @@
 // header.style.borderBottom = 'solid 4px #ccc';
 // console.log(document.getElementsByTagName('div'));
 
-var input = document.querySelector('input');
-input.value = "Hello world";
+// var input = document.querySelector('input');
+// input.value = "Hello world";
 
-var submit = document.querySelector('input[type="submit"]');
-submit.value = "SEND";
+// var submit = document.querySelector('input[type="submit"]');
+// submit.value = "SEND";
 
-var item = document.querySelector('.list-group-item');
-item.style.color = "red";   
+// var item = document.querySelector('.list-group-item');
+// item.style.color = "red";   
 
-var lastItem = document.querySelector('.list-group-item:last-child');
-lastItem.style.color = 'blue';
+// var lastItem = document.querySelector('.list-group-item:last-child');
+// lastItem.style.color = 'blue';
 
-var secondItem = document.querySelector('.list-group-item:nth-child(2)');
-secondItem.style.color = 'green';
+// var secondItem = document.querySelector('.list-group-item:nth-child(2)');
+// secondItem.style.color = 'green';
 
-var thirdItem = document.querySelector('.list-group-item:nth-child(2)');
-thirdItem.style.display = "none";
+// var thirdItem = document.querySelector('.list-group-item:nth-child(2)');
+// thirdItem.style.display = "none";
 
 // .......................................querySelectorAll............................
-var titles = document.querySelectorAll('.title');
-console.log(titles);
-titles[0].textContent = "Hello";
+// var titles = document.querySelectorAll('.title');
+// console.log(titles);
+// titles[0].textContent = "Hello";
 
-var odd = document.querySelectorAll('li:nth-child(odd)');
-var even = document.querySelectorAll('li:nth-child(even)');
-for(let i = 0; i < even.length; i++){
-    odd[i].style.backgroundColor = "green";
-    even[i].style.backgroundColor = "#ccc";
-}
+// var odd = document.querySelectorAll('li:nth-child(odd)');
+// var even = document.querySelectorAll('li:nth-child(even)');
+// for(let i = 0; i < even.length; i++){
+//     odd[i].style.backgroundColor = "green";
+//     even[i].style.backgroundColor = "#ccc";
+// }
+
+// ........................................Traversing the dom ........................................
+var itemList = document.querySelector('#items');
+//ParentNode
+// console.log(itemList.parentNode);
+// itemList.parentNode.style.backgroundColor = "#f4f4f4";
+// console.log(itemList.parentNode.parentNode.parentNode);
+
+// parentElement
+// console.log(itemList.parentElement);
+// itemList.parentElement.style.backgroundColor = "#f4f4f4";
+// console.log(itemList.parentElement.parentElement.parentElement);
+
+// childNodes
+// console.log(itemList.childNodes);
+
+// console.log(itemList.children);
+// console.log(itemList.children[1]);
+// itemList.children[1].style.backgroundColor = "yellow";
+
+// firstChild
+// console.log(itemList.firstChild);
+// // firstElementChild
+// console.log(itemList.firstElementChild);
+// itemList.firstElementChild.textContent = "Hello 1";
+
+// // lastChild
+// console.log(itemList.lastChild);
+// // lastElementChild
+// console.log(itemList.lastElementChild);
+// itemList.lastElementChild.textContent = "Hello 4";
+
+// nextSiblings
+// console.log(itemList.nextSibling);
+// // nextElementSibling
+// console.log(itemList.nextElementSibling);
+
+// previousSibling
+console.log(itemList.previousSibling);
+// previousElementSibling
+console.log(itemList.previousElementSibling);
+// itemList.previousElementSibling.style.color = "green";
+
+// createElement
+// create a div 
+var newDiv = document.createElement("div");
+// add a class 
+newDiv.className = "hello";
+// add a id 
+newDiv.id = "hello1";
+// add Attr
+newDiv.setAttribute("title", "Hello div");
+// create text Node 
+var newDivText = document.createTextNode('Hello world');
+// add text to div
+newDiv.appendChild(newDivText);
+
+var container = document.querySelector("header .container");
+var h1 = document.querySelector("header h1");
+
+console.log(newDiv);
+newDiv.style.fontSize = "30px";
+
+container.insertBefore(newDiv, h1);
